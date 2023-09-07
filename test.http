@@ -1,0 +1,2 @@
+# Get all Tests with questions and answers
+GET http://localhost:8080/odata/v4/dev-challenge/Tests?$expand=questions($expand=answers)
