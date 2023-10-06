@@ -1,2 +1,14 @@
-# Get all Tests with questions and answers
-GET http://localhost:8080/odata/v4/dev-challenge/Tests?$expand=questions($expand=answers)
+### Get all Tests with questions and answers
+GET http://localhost:8080/odata/v4/dev-challenge/Tests?$expand=questions($expand=answers) HTTP/1.1
+
+### Get metadata
+GET http://localhost:8080/odata/v4/dev-challenge/$metadata
+
+### Get the question with ID 1
+GET http://localhost:8080/odata/v4/dev-challenge/Questions(ID=16eeb233-07d2-498b-a8f0-7a8c57b5c542,IsActiveEntity=true)
+
+### Action questionsCount
+POST http://localhost:8080/odata/v4/dev-challenge/Tests(ID=c8e61958-af1b-496c-94ac-ecbd47c1cf40,IsActiveEntity=true)/DevChallengeService.assignQuestionsToTest 
+Content-Type: application/json 
+
+{"questionsCount":5} 

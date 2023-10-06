@@ -11,9 +11,10 @@ entity Tests: cuid, managed {
 entity Questions: cuid{ 
     text: String(111);
     test: Association to one Tests;
-    answers: Composition of one Answers;
+    answers: Composition of one Answers; // on answers.question = $self;
 } 
 
 aspect Answers: cuid { 
     text: String;
+    // question: Association to one Questions;
 } 
