@@ -11,4 +11,4 @@ GET http://localhost:8080/odata/v4/dev-challenge/Questions(ID=16eeb233-07d2-498b
 POST http://localhost:8080/odata/v4/dev-challenge/Tests(ID=c8e61958-af1b-496c-94ac-ecbd47c1cf40,IsActiveEntity=true)/DevChallengeService.assignQuestionsToTest 
 Content-Type: application/json 
 
-{"questionsCount":5} 
+{"questionsCount":2} 
